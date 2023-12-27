@@ -40,7 +40,7 @@ Last_name Varchar(50),
 Salary int
 );
 ### -Display Table contains:- 
-### select function: 
+### -select function: 
 - either you use select with the names of the cloumns EX: [Select ID,First_name, Last_name , Salary From employee;]
 - or by use * instead of cloumn names EX: [Select * From employee;]
 
@@ -82,4 +82,36 @@ EX:
 use sql101
 drop table empolyee_info;
 
+## Handling data:
+### -Adding data to the table :-
+Insert into "name of table"(names of columns)
+values (data want to insert);
 
+EX: Insert into Empolyee(ID,First_name,Last_name,Salary)
+values(101,'Ahmad','alkahoje',5500);
+ 
+For multiple insertion you can put "," and repeat the pattern 
+EX: Insert into Empolyee
+values
+(101,'Ahmad','alkahoje',5500),
+(102,'Khild','alkahoje',5000),
+(103,'Mohammed','alkahoje',4500);
+
+### -Where function :-
+EX: select * from empolyee where First_name = 'Khild' 
+EX: select * from empolyee where salary > 5000;
+
+### -Update Function :- 
+Update (name of the table ) set (column name) = 'new value' where (value to be changed);
+Ex: update empolyee set First_name = Abdulah where ID = 102 ; 
+
+### -Order by function:-
+EX: select * from empolyee order by First_name (Asc/Desc);
+
+Note: by defult it will arrange it as Ascending  = ASC  , if you want Descending at the end before ; write Desc 
+
+### -Delete Function:-
+EX: delete from employee where ID = 101 ; 
+
+### - Group by Function:-
+EX: select salary from empolyee group by salary ;
